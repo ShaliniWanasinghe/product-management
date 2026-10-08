@@ -1,0 +1,21 @@
+<section class="products-shell">
+  
+  <h1>Product Management</h1>
+  <p class="subtitle">Angular project setup is working correctly.</p>
+
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <article class="product-card">
+        <img [src]="product.imageUrl" [alt]="product.name" />
+        <div class="info">
+          <h2>{{ product.name }}</h2>
+          <p>{{ product.description }}</p>
+          <div class="meta">
+            <span>{{ product.category }}</span>
+            <span>Rs{{ product.price }}</span>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
